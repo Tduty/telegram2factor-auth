@@ -49,7 +49,7 @@ class TelegramUpdateHandlerBeanPostProcessor : BeanPostProcessor, Ordered {
             MSG -> createControllerUpdate2ApiMethod(bean, method)
             EDIT -> createProcessListForController(bean, method)
         }
-        if (controller != null) container.addBotController(path, controller)
+        container.addBotController(path, controller)
     }
 
     private fun createControllerUpdate2ApiMethod(bean: Any, method: Method): BotApiMethodController {

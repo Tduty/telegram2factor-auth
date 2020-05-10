@@ -36,6 +36,9 @@ dependencies {
 	}
 }
 
+val appName = "telegram2factor-auth"
+val appVer by lazy { "0.0.1" }
+
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
@@ -44,5 +47,18 @@ tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "1.8"
+	}
+}
+
+tasks.bootJar {
+	manifest {
+		attributes("Multi-Release" to true)
+	}
+
+	archiveBaseName.set(appName)
+	archiveVersion.set(appVer)
+
+	if (project.hasProperty("archiveName")) {
+		archiveFileName.set(project.properties["archiveName"] as String)
 	}
 }
