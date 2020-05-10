@@ -19,6 +19,12 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("org.telegram:telegrambots:4.8.1")
+	implementation("org.springframework.boot:spring-boot-starter-web:2.2.6.RELEASE")
+	implementation("org.telegram:telegrambots-spring-boot-starter:4.1.2")
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	testImplementation("org.jetbrains.kotlin:kotlin-test")
+	testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
