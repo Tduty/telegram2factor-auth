@@ -15,7 +15,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.Keyboard
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow
 
 @BotController
-class SimpleOkayController @Autowired constructor(
+class AuthBotController @Autowired constructor(
         private val tokenGenerator: TokenGenerator
 ) {
 
